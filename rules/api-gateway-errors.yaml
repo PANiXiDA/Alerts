@@ -35,4 +35,4 @@ filter:
 alert:
 - "telegram"
 
-telegram_room_id: "-1002293685042"
+telegram_thread_id: 3
