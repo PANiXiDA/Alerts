@@ -19,7 +19,7 @@ jobs:
           script: |
             # Если папка Alerts не существует, клонируем репозиторий, иначе делаем git pull
             if [ ! -d "Alerts" ]; then
-              git clone https://github.com/PANiXiDA/Alerts.git Alerts
+              git clone https://${{ secrets.TOKEN }}@github.com/PANiXiDA/Alerts.git Alerts
             else
               cd Alerts && git pull
             fi
