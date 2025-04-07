@@ -2,37 +2,37 @@
 
 # (Required)
 # Rule name, must be unique
-#name: API Gateway Health Check
+name: API Gateway Health Check
 
 # (Required)
 # Type of alert.
 # flatline - rule matches when the total number of events is under a given threshold for a time period
-#type: flatline
+type: flatline
 
 # (Required)
 # Index to search, wildcard supported
-#index: api-gateway-*
+index: api-gateway-*
 # (Required, flatline specific)
 # threshold - minimum number of events for an alert not to be triggered.
-#threshold: 1
+threshold: 1
 
 # (Required, flatline specific)
 # timeframe - time period that must contain less than threshold events.
-#timeframe:
-#  minutes: 2
+timeframe:
+  minutes: 2
 
 # (Required)
 # A list of Elasticsearch filters used for find events
 # These filters are joined with AND and nested in a filtered query
 # For more info: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
-#filter:
-#- query:
-#    query_string:
-#      query: "level : Information"
+filter:
+- query:
+    query_string:
+      query: "level : Information"
 
 # (Required)
 # The alert is use when a match is found
-#alert:
-#- "telegram"
+alert:
+- "telegram"
 
-#telegram_thread_id: 3
+telegram_thread_id: 3
