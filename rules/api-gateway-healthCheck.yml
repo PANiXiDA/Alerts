@@ -35,4 +35,4 @@
 #alert:
 #- "telegram"
 
-telegram_thread_id: 3
+#telegram_thread_id: 3
