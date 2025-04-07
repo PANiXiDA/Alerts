@@ -2,7 +2,7 @@
 
 # (Required)
 # Rule name, must be unique
-name: API Gateway Errors
+name: Frontend Service Errors
 
 # (Required)
 # Type of alert.
@@ -11,7 +11,7 @@ type: frequency
 
 # (Required)
 # Index to search, wildcard supported
-index: api-gateway-*
+index: frontend-service-production*
 # (Required, frequency specific)
 # Alert when this many documents matching the query occur within a timeframe
 num_events: 1
@@ -35,4 +35,4 @@ filter:
 alert:
 - "telegram"
 
-telegram_thread_id: 3
+telegram_thread_id: 41
